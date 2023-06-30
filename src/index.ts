@@ -1,8 +1,8 @@
 import { TransactionRequest } from "@ethersproject/abstract-provider"
 import { TypedDataDomain, TypedDataField } from "@ethersproject/abstract-signer"
 import { Bytes } from "@ethersproject/bytes"
-import { HDNode } from "@ethersproject/hdnode"
-import { Wallet } from "@ethersproject/wallet"
+import { HDNode } from "@quais/hdnode"
+import { Wallet } from "@quais/wallet"
 
 import { generateMnemonic } from "bip39"
 
