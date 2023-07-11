@@ -1,10 +1,10 @@
-# Tally Contribution Guide
+# Pelagus Contribution Guide
 
 👍🎉 First off, thanks for taking the time to contribute! 🎉👍 Contributions
 are welcome from anyone on the internet, and even the smallest of fixes are
 appreciated!
 
-The following is a set of guidelines for contributing to Tally and its
+The following is a set of guidelines for contributing to Pelagus and its
 packages. These are mostly guidelines, not rules. Use your best judgment, and
 feel free to propose changes to this document in a pull request. While the team
 works towards a first release, bigger contributions will be slow-rolled or
@@ -13,32 +13,20 @@ to them very soon! More below.
 
 ## Deciding What to Work On
 
-Tally is currently being built by a core team in collaboration with a community
-on the Tally Community Discord server. **Discord is the right place to start
+Pelagus is currently being built by a core team in collaboration with a community
+on the Pelagus Community Discord server. **Discord is the right place to start
 discussions on new features and bugs.** The community on Discord, led by a few
 designated folks will help to funnel these into well-organized GitHub issues
 for features and bugs, as well as organize folks to tackle any issues they’re
 interested in. For the time being, the core team will be charged with
 reviewing, critiquing, and ultimately merging new work.
 
-### Short term: Limited Review
-
-In Q4 2021/Q1 2022, Tally is in a heads down sprint to a series of initial
-releases. This means PRs with feature contributions _may_ get closed because
-the team does not have time to review them properly. We still deeply appreciate
-these contributions, and are not planning on forgetting them! When PRs are
-closed for this reason, they will be added to [this tracking
-issue](https://github.com/tallycash/tally-extension/issues/420), which
-the team will revisit with community input in Q1 2022. If you’re wondering
-whether a feature is likely to get reviewed, we strongly recommend discussing
-in Discord before going all in.
-
 ## Getting started
 
-1. Fork tallycash/hd-keyring
+1. Fork pelaguswallet/hd-keyring
 2. Clone your fork
 3. Follow the [setup
-   instructions](https://github.com/tallycash/hd-keyring#building-and-developing).
+   instructions](https://github.com/pelaguswallet/hd-keyring#building-and-developing).
 4. If you find an issue you would like to work on, post a comment indicating
    you’d like to pick it up. Otherwise, please file an issue indicating what
    you are intending to do—there could be a duplicate issue, or someone else
@@ -68,13 +56,13 @@ code base.
 
 ### Commit Signing
 
-Commits on the Tally repository are all required to be signed. No PR will be
+Commits on the Pelagus repository are all required to be signed. No PR will be
 merged if it has unsigned commits. See the GitHub documentation on commit
 signing to get it set up.
 
 ### Continuous Integration
 
-Tally uses GitHub Actions for continuous integration. All Actions jobs
+Pelagus uses GitHub Actions for continuous integration. All Actions jobs
 (including tests, linting) must be green to merge a PR.
 
 ### Linting
