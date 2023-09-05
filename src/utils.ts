@@ -22,7 +22,7 @@ export function normalizeHexAddress(address: string | Buffer): string {
     typeof address === "object" && !("toLowerCase" in address)
       ? address.toString("hex")
       : address
-  const noPrefix = addressString.replace(/^0x/, "")
+  const noPrefix = (addressString as string).replace(/^0x/, "")
   const even = noPrefix.length % 2 === 0 ? noPrefix : `0${noPrefix}`
   return `0x${Buffer.from(even, "hex").toString("hex")}`
 }

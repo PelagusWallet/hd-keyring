@@ -3,8 +3,9 @@ import { TypedDataDomain, TypedDataField } from "@ethersproject/abstract-signer"
 import { Bytes } from "@ethersproject/bytes"
 import { HDNode } from "@quais/hdnode"
 import { Wallet } from "@quais/wallet"
+import { langEs as es } from "@quais/wordlists/lib/lang-es"
 
-import { generateMnemonic } from "bip39"
+import { generateMnemonic, wordlists } from "bip39"
 
 import { normalizeHexAddress, validateAndFormatMnemonic } from "./utils"
 
@@ -85,7 +86,7 @@ export default class HDKeyring implements Keyring<SerializedHDKeyring> {
     }
 
     const mnemonic = validateAndFormatMnemonic(
-      hdOptions.mnemonic || generateMnemonic(hdOptions.strength)
+      hdOptions.mnemonic || generateMnemonic(hdOptions.strength, undefined, wordlists.spanish), wordlists.spanish
     )
 
     if (!mnemonic) {
@@ -93,13 +94,14 @@ export default class HDKeyring implements Keyring<SerializedHDKeyring> {
     }
 
     this.#mnemonic = mnemonic
-
+    
     const passphrase = hdOptions.passphrase ?? ""
-
     this.path = hdOptions.path
-    this.#hdNode = HDNode.fromMnemonic(mnemonic, passphrase, "en").derivePath(
+
+    this.#hdNode = HDNode.fromMnemonic(mnemonic, passphrase, es).derivePath(
       this.path
     )
+
     this.id = this.#hdNode.fingerprint
     this.#addressIndex = 0
     this.#wallets = []
