@@ -25,7 +25,7 @@ export type Options = {
 
 const defaultOptions = {
   // default path is BIP-44, where depth 5 is the address index
-  path: "m/44'/60'/0'/0",
+  path: "m/44'/994'/0'/0",
   strength: 256,
   mnemonic: null,
   passphrase: null,
